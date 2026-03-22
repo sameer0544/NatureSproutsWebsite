@@ -1207,8 +1207,6 @@ footer {
     }
 }
 
-    p
-
 /* Clickable Feature Cards Override */
 a.feature-card.clickable-card {
     text-decoration: none !important;
@@ -1231,3 +1229,4 @@ a.feature-card.clickable-card p {
     text-decoration: none !important;
     color: #a0aec0 !important;
 }
+
