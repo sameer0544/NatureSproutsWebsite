@@ -24,4 +24,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://sameer0544.github.io/NatureSproutsWebsite/smart-bookings.html</loc>
+        <lastmod>2024-03-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sameer0544.github.io/NatureSproutsWebsite/financial-clarity.html</loc>
+        <lastmod>2024-03-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
