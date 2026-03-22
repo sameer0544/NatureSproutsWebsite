@@ -1038,3 +1038,17 @@ footer {
     margin-top: 1px;
     margin-left: 1px;
 }
+/* Clickable Feature Cards Override */
+a.feature-card.clickable-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+a.feature-card.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+a.feature-card.clickable-card .link {
+    display: inline-block;
+}
