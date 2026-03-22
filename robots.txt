@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sameer0544.github.io/NatureSproutsWebsite/sitemap.xml
