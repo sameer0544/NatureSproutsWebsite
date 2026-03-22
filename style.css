@@ -1052,3 +1052,9 @@ a.feature-card.clickable-card:hover {
 a.feature-card.clickable-card .link {
     display: inline-block;
 }
+a.feature-card.clickable-card h3 {
+    color: #333 !important;
+}
+a.feature-card.clickable-card p {
+    color: #666 !important;
+}
