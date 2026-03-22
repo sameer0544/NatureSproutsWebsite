@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const sendMessage = () => {
             const message = waInput.value.trim();
-            const phoneNumber = "919999999999";
+            const phoneNumber = "917887869614";
             let url = "https://wa.me/" + phoneNumber;
             
             if (message) {
