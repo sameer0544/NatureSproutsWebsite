@@ -1035,12 +1035,183 @@ footer {
     animation: none;
 }
 
-    margin-top: 1px;
-    margin-left: 1px;
+        margin-top: 1.5rem;
+    }
+
+    /* Features */
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .feature-row {
+        margin-bottom: 60px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Glass Card */
+    .glass-card {
+        width: 100%;
+        height: auto;
+    }
 }
+
+/* ===== MOBILE (max-width: 600px) ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Preloader */
+    .preloader-logo {
+        font-size: 3rem;
+    }
+
+    /* Features */
+    .features-summary, .features, .detailed-features {
+        padding: 60px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Pricing */
+    .pricing {
+        padding: 60px 0;
+    }
+
+    .pricing-card {
+        padding: 2rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    /* Page Headers */
+    .page-header {
+        padding: 50px 0;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-form .glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 0;
+    }
+
+    .corporate-info {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+}
+
+    p
+
 /* Clickable Feature Cards Override */
 a.feature-card.clickable-card {
-    text-decoration: none;
+    text-decoration: none !important;
     color: inherit;
     display: block;
     cursor: pointer;
@@ -1053,8 +1224,10 @@ a.feature-card.clickable-card .link {
     display: inline-block;
 }
 a.feature-card.clickable-card h3 {
-    color: #333 !important;
+    text-decoration: none !important;
+    color: #f8f9fa !important;
 }
 a.feature-card.clickable-card p {
-    color: #666 !important;
+    text-decoration: none !important;
+    color: #a0aec0 !important;
 }
