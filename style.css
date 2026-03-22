@@ -737,12 +737,277 @@ footer {
     display: inline-block;
 }
 
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== TABLET (max-width: 968px) ===== */
 @media (max-width: 968px) {
-    .feature-row, .feature-row.reverse, .contact-grid {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(10, 15, 30, 0.98);
+        backdrop-filter: blur(20px);
         flex-direction: column;
-        grid-template-columns: 1fr;
+        padding: 100px 2rem 2rem;
+        transition: right 0.4s ease;
+        z-index: 999;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .nav-links li a {
+        font-size: 1.1rem;
+    }
+
+    /* Hero */
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        max-width: 100%;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-top: 3rem;
+    }
+
+    .dashboard-stack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secondary-dashboard {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin-top: 1.5rem;
+    }
+
+    /* Features */
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
         text-align: center;
         gap: 3rem;
     }
-    .feature-row { margin-bottom: 60px; }
+
+    .feature-row {
+        margin-bottom: 60px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Glass Card */
+    .glass-card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ===== MOBILE (max-width: 600px) ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Preloader */
+    .preloader-logo {
+        font-size: 3rem;
+    }
+
+    /* Features */
+    .features-summary, .features, .detailed-features {
+        padding: 60px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Pricing */
+    .pricing {
+        padding: 60px 0;
+    }
+
+    .pricing-card {
+        padding: 2rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    /* Page Headers */
+    .page-header {
+        padding: 50px 0;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-form .glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 0;
+    }
+
+    .corporate-info {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
 }

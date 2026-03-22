@@ -54,6 +54,23 @@ document.querySelectorAll('.feature-card, .pricing-card, .hero-content, .hero-im
     observer.observe(el);
 });
 
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
 // 3D Tilt Effect for Cards
 document.querySelectorAll('.glass-card, .feature-card, .pricing-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
